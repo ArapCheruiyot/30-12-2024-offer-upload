@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive File Upload</title>
+    <script src="script.js" defer></script>
+    <style>
+        .highlighted {
+            background-color: #f0f8ff;
+        }
+        .file-item {
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Drive File Upload</h1>
+
+    <!-- Google Sign-In Button -->
+    <div class="g_id_signin"></div>
+
+    <!-- Choose File Button (Now visible) -->
+    <input type="file" id="fileInput" style="display: none;" multiple>
+    <label for="fileInput" id="chooseFileBtn" style="cursor: pointer; padding: 10px; background-color: #4CAF50; color: white; border: none; display: inline-block;">
+        Choose File
+    </label>
+    
+    <!-- Upload Button -->
+    <button id="uploadBtn" disabled>Upload</button>
+    
+    <!-- Delete Selected Button -->
+    <button id="deleteSelectedBtn" style="background-color: #f44336; color: white; border: none; padding: 10px; cursor: pointer; display: inline-block;">
+        Delete Selected
+    </button>
+
+    <!-- File List Display -->
+    <div id="fileList"></div>
+
+    <!-- Upload Status Display -->
+    <div id="uploadStatus"></div>
+
+    <!-- Google API Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
